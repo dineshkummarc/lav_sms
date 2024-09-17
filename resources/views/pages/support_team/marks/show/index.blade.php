@@ -11,6 +11,7 @@
     @foreach($exams as $ex)
         @foreach($exam_records->where('exam_id', $ex->id) as $exr)
 
+            @if(Qs::userIsTeamSA())
                 <div class="card">
                     <div class="card-header header-elements-inline">
                         <h6 class="font-weight-bold">{{ $ex->name.' - '.$ex->year }}</h6>
@@ -30,6 +31,7 @@
                     </div>
 
                 </div>
+            @endif
 
             {{--    EXAM COMMENTS   --}}
             @include('pages.support_team.marks.show.comments')
