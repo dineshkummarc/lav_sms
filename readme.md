@@ -2,6 +2,12 @@
 
 **LAVSMS** is developed for educational institutions like schools and colleges built on Laravel 8
 
+# restore Database
+1. php artisan migrate:fresh --seed
+2. php artisan key:generate
+3. php artisan package:discover --ansi
+
+
 **SCREENSHOTS** 
 
 **Dashboard**
